@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@page { margin: 0;}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+  font-size:5vw;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body onload="myFunction()">
+<div class="container" id="cer">
+  <img src="cer.png" alt="Snow" style="width:100%;">
+  <h1><div class="centered" id="name" style="font-family:verdana" ></div><h2>
+</div>
+<script>
+function myFunction() {
+  var fullname = prompt("Please enter your name For certificate", "NAME SURNAME");
+  if (fullname != null) {
+    document.getElementById("name").innerHTML =fullname;
+    window.print();
+  }
+}
+</script>
+</body>
+</html> 
